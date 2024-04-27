@@ -22,9 +22,9 @@ namespace SampleMaster
             var interfaceName = "以太网";
 
             /* Set ESI location. Make sure it contains ESI files! The default path is /home/{user}/.local/share/ESI */
-            var localAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            var esiDirectoryPath = Path.Combine(localAppDataPath, "ESI");
-            Directory.CreateDirectory(esiDirectoryPath);
+            var localPath = System.Environment.CurrentDirectory;
+            var esiDirectoryPath = Path.Combine(localPath, "ESI");
+            // Directory.CreateDirectory(esiDirectoryPath);
 
             /* Copy native file. NOT required in end user scenarios, where EtherCAT.NET package is installed via NuGet! */
             var codeBase = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
