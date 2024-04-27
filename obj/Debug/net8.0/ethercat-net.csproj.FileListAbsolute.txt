@@ -20,10 +20,7 @@ D:\ethercat-net\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 D:\ethercat-net\bin\Debug\net8.0\SOEM.PInvoke.dll
 D:\ethercat-net\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\ethercat-net\bin\Debug\net8.0\System.Text.Json.dll
-D:\ethercat-net\bin\Debug\net8.0\runtimes\linux-x64\native\libsoem_wrapper.so
-D:\ethercat-net\bin\Debug\net8.0\runtimes\linux-x86\native\libsoem_wrapper.so
 D:\ethercat-net\bin\Debug\net8.0\runtimes\win-x64\native\soem_wrapper.dll
-D:\ethercat-net\bin\Debug\net8.0\runtimes\win-x86\native\soem_wrapper.dll
 D:\ethercat-net\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\ethercat-net\obj\Debug\net8.0\ethercat-net.csproj.AssemblyReference.cache
 D:\ethercat-net\obj\Debug\net8.0\ethercat-net.GeneratedMSBuildEditorConfig.editorconfig
@@ -36,3 +33,4 @@ D:\ethercat-net\obj\Debug\net8.0\refint\ethercat-net.dll
 D:\ethercat-net\obj\Debug\net8.0\ethercat-net.pdb
 D:\ethercat-net\obj\Debug\net8.0\ethercat-net.genruntimeconfig.cache
 D:\ethercat-net\obj\Debug\net8.0\ref\ethercat-net.dll
+D:\ethercat-net\obj\Debug\net8.0\ethercat-net.sourcelink.json

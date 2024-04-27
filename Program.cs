@@ -19,7 +19,7 @@ namespace SampleMaster
         static async Task Main(string[] args)
         {          
             /* Set interface name. Edit this to suit your needs. */
-            var interfaceName = "Realtek Gaming 2.5GbE Family Controller";
+            var interfaceName = "以太网";
 
             /* Set ESI location. Make sure it contains ESI files! The default path is /home/{user}/.local/share/ESI */
             var localAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
@@ -48,6 +48,12 @@ namespace SampleMaster
             var settings = new EcSettings(cycleFrequency: 10U, esiDirectoryPath, interfaceName);
 
             /* scan available slaves */
+            var availableSlaves = EcUtilities.GetAvailableNetworkInterfaces();
+            foreach (var slave in availableSlaves)
+            {
+                logger.LogInformation($"Found slave: {slave}");
+            }
+
             var rootSlave = EcUtilities.ScanDevices(settings.InterfaceName);
 
             rootSlave.Descendants().ToList().ForEach(slave =>

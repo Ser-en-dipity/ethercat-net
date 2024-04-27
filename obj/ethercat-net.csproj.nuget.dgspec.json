@@ -20,7 +20,7 @@
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "D:\\ethercat-net\\MyPackage": {}
         },
         "frameworks": {
           "net8.0": {
@@ -45,7 +45,7 @@
           "dependencies": {
             "EtherCAT.NET": {
               "target": "Package",
-              "version": "[1.0.0-alpha.9.final, )"
+              "version": "[1.0.0-alpha.9, )"
             },
             "Microsoft.DotNet.PlatformAbstractions": {
               "target": "Package",

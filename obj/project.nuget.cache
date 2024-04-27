@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rWtx29RExlfDb65vQW8bPP1y3bncO8ctrlz9ef8jY5hiAPR0ZktwZn56D1P5zwUP3gmTKrdMSTVtmtCDAF0Cog==",
+  "dgSpecHash": "xlmI60D1MIdAXPDiNzS7vMQ5bcTTQsgLQWL+CCJRkvgAk+aQbReHeTi6916MRJBB9+MQ7TlFsuB0D03S0eRELA==",
   "success": true,
   "projectFilePath": "D:\\ethercat-net\\ethercat-net.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\i'CNC\\.nuget\\packages\\ethercat.net\\1.0.0-alpha.9.final\\ethercat.net.1.0.0-alpha.9.final.nupkg.sha512",
+    "C:\\Users\\i'CNC\\.nuget\\packages\\ethercat.net\\1.0.0-alpha.9\\ethercat.net.1.0.0-alpha.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\5.0.0-preview.5.20278.1\\microsoft.dotnet.platformabstractions.5.0.0-preview.5.20278.1.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0-preview.3.24172.9\\microsoft.extensions.configuration.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.configuration.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
@@ -18,7 +18,7 @@
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.extensions.options\\9.0.0-preview.3.24172.9\\microsoft.extensions.options.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.0-preview.3.24172.9\\microsoft.extensions.options.configurationextensions.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0-preview.3.24172.9\\microsoft.extensions.primitives.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\i'CNC\\.nuget\\packages\\soem.pinvoke\\1.0.0-alpha.9.final\\soem.pinvoke.1.0.0-alpha.9.final.nupkg.sha512",
+    "C:\\Users\\i'CNC\\.nuget\\packages\\soem.pinvoke\\1.0.0-alpha.9\\soem.pinvoke.1.0.0-alpha.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\system.text.encodings.web\\9.0.0-preview.3.24172.9\\system.text.encodings.web.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\i'CNC\\.nuget\\packages\\system.text.json\\9.0.0-preview.3.24172.9\\system.text.json.9.0.0-preview.3.24172.9.nupkg.sha512"
