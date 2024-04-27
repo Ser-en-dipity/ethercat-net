@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ethercat-net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af26b24f3a2588e5a8940ae3a69b3a2df4b6ac9c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76b3471c5e65ad450a483140a21c3fd81d40e768")]
 [assembly: System.Reflection.AssemblyProductAttribute("ethercat-net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ethercat-net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

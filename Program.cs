@@ -61,25 +61,39 @@ namespace SampleMaster
                 // If you have special extensions for this slave, add it here:                    
                 // slave.Extensions.Add(new MyFancyExtension());
 
-                /*################ Sample code START ##################
+                
 
                 // Example code to add SDO write request during initialization
-                // to Beckhoff "EL3021"
-                if (slave.ProductCode == 0xBCD3052)
+                // to Delta "B3M"
+                if (slave.ProductCode == 0x00006010)
                 {
-                    var dataset = new List<object>();
-                    dataset.Add((byte)0x01);
+                    var dataset1 = new List<object>();
+                    dataset1.Add((byte)0x04);
+                    var dataset2 = new List<object>();
+                    dataset2.Add((byte)0x01);
+                    var dataset3 = new List<object>();
+                    dataset3.Add((byte)0x00);
+                    var dataset4 = new List<object>();
+                    dataset4.Add((byte)0x06);
+                    dataset4.Add((byte)0x07);
+                    dataset4.Add((byte)0x0F);
+                    var dataset5 = new List<object>();
+                    dataset5.Add((byte)0x01);
 
                     var requests = new List<SdoWriteRequest>()
                     {
                         // Index 0x8000 sub index 6: Filter on
-                        new SdoWriteRequest(0x8000, 0x6, dataset)   
+                        new SdoWriteRequest(0x6060, 0x00, dataset1),
+                        new SdoWriteRequest(0x6087, 0x00, dataset2),
+                        new SdoWriteRequest(0x6071, 0x00, dataset3),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4),
+                        new SdoWriteRequest(0x6071, 0x00, dataset5)
                     };
 
                     slave.Extensions.Add(new InitialSettingsExtension(requests));
                 }
 
-                ################## Sample code END #################*/
+                
 
                 EcUtilities.CreateDynamicData(settings.EsiDirectoryPath, slave);
             });
