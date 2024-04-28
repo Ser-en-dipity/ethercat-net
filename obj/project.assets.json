@@ -932,25 +932,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\i'CNC\\.nuget\\packages\\": {}
+    "C:\\Users\\小透明\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ethercat-net\\ethercat-net.csproj",
+      "projectUniqueName": "C:\\Users\\小透明\\Desktop\\ethercat-net\\ethercat-net.csproj",
       "projectName": "ethercat-net",
-      "projectPath": "D:\\ethercat-net\\ethercat-net.csproj",
-      "packagesPath": "C:\\Users\\i'CNC\\.nuget\\packages\\",
-      "outputPath": "D:\\ethercat-net\\obj\\",
+      "projectPath": "C:\\Users\\小透明\\Desktop\\ethercat-net\\ethercat-net.csproj",
+      "packagesPath": "C:\\Users\\小透明\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\小透明\\Desktop\\ethercat-net\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\i'CNC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\小透明\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "D:\\ethercat-net\\MyPackage": {}
+        "C:\\Users\\小透明\\Desktop\\ethercat-net\\MyPackage": {}
       },
       "frameworks": {
         "net8.0": {

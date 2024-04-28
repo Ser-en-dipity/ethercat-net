@@ -17,7 +17,7 @@ namespace SampleMaster
     class Program
     {
         static async Task Main(string[] args)
-        {          
+        {
             /* Set interface name. Edit this to suit your needs. */
             var interfaceName = "以太网";
 
@@ -61,42 +61,49 @@ namespace SampleMaster
                 // If you have special extensions for this slave, add it here:                    
                 // slave.Extensions.Add(new MyFancyExtension());
 
-                
+
 
                 // Example code to add SDO write request during initialization
                 // to Delta "B3M"
-                if (slave.ProductCode == 0x00006010)
-                {
-                    var dataset1 = new List<object>();
-                    dataset1.Add((byte)0x04);
-                    var dataset2 = new List<object>();
-                    dataset2.Add((byte)0x01);
-                    var dataset3 = new List<object>();
-                    dataset3.Add((byte)0x00);
-                    var dataset4 = new List<object>();
-                    dataset4.Add((byte)0x06);
-                    dataset4.Add((byte)0x07);
-                    dataset4.Add((byte)0x0F);
-                    var dataset5 = new List<object>();
-                    dataset5.Add((byte)0x01);
 
-                    var requests = new List<SdoWriteRequest>()
+                var dataset1 = new List<object>();
+                dataset1.Add((byte)0x04);
+                var dataset2_1 = new List<object>();
+                dataset2_1.Add((byte)0x0A);
+                var dataset2_2 = new List<object>();
+                dataset2_2.Add(0x11);
+                var dataset3 = new List<object>();
+                dataset3.Add((byte)0x00);
+                var dataset4_1 = new List<object>();
+                dataset4_1.Add((byte)0x06);
+                var dataset4_2 = new List<object>();
+                dataset4_2.Add((byte)0x07);
+                var dataset4_3 = new List<object>();
+                dataset4_3.Add((byte)0x0F);
+                var dataset5 = new List<object>();
+                dataset5.Add((byte)0x12);
+
+                var requests = new List<SdoWriteRequest>()
                     {
                         // Index 0x8000 sub index 6: Filter on
                         new SdoWriteRequest(0x6060, 0x00, dataset1),
-                        new SdoWriteRequest(0x6087, 0x00, dataset2),
+                        // new SdoWriteRequest(0x6087, 0x00, dataset2_1),
+                        // new SdoWriteRequest(0x6084, 0x00, dataset2_2),
                         new SdoWriteRequest(0x6071, 0x00, dataset3),
-                        new SdoWriteRequest(0x6040, 0x00, dataset4),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_1),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_2),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_3),
                         new SdoWriteRequest(0x6071, 0x00, dataset5)
                     };
 
-                    slave.Extensions.Add(new InitialSettingsExtension(requests));
-                }
+                slave.Extensions.Add(new InitialSettingsExtension(requests));
 
-                
+
+
 
                 EcUtilities.CreateDynamicData(settings.EsiDirectoryPath, slave);
             });
+
 
             /* print list of slaves */
             var message = new StringBuilder();
@@ -107,6 +114,8 @@ namespace SampleMaster
             foreach (var slave in slaves)
             {
                 message.AppendLine($"{slave.DynamicData.Name} (PDOs: {slave.DynamicData.Pdos.Count} - CSA: {slave.Csa})");
+                foreach (var pdo in slave.DynamicData.Pdos)
+                    message.AppendLine($"pdos: {pdo.Name} {pdo.OsMax}");
             }
 
             logger.LogInformation(message.ToString().TrimEnd());
@@ -131,9 +140,13 @@ namespace SampleMaster
                 var random = new Random();
                 var cts = new CancellationTokenSource();
 
+                // Beckhoff EL3021 SDO read (index: 0x8000 sub index: 0x6)
+                var data = new byte[4];
+                EcUtilities.SdoRead(master.Context, 1, 0x6060, 0, ref data);
+                Console.WriteLine(BitConverter.ToString(data));
                 var task = Task.Run(() =>
                 {
-                    var sleepTime = 1000 / (int)settings.CycleFrequency;
+                    var sleepTime = 10000 / (int)settings.CycleFrequency;
 
                     while (!cts.IsCancellationRequested)
                     {
@@ -144,7 +157,11 @@ namespace SampleMaster
                             if (variables.Any())
                             {
                                 var myVariableSpan = new Span<int>(variables.First().DataPtr.ToPointer(), 1);
-                                myVariableSpan[0] = random.Next(0, 100);                              
+                                // myVariableSpan[0] = random.Next(0, 100);
+                                foreach (var i in variables)
+                                {
+                                    // Console.WriteLine(i.Name + i.DataType);
+                                }
                             }
                         }
 
