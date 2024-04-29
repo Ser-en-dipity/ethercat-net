@@ -81,19 +81,19 @@ namespace SampleMaster
                 var dataset4_3 = new List<object>();
                 dataset4_3.Add((byte)0x0F);
                 var dataset5 = new List<object>();
-                dataset5.Add((byte)0x12);
+                dataset5.Add((byte)0x0200);
 
                 var requests = new List<SdoWriteRequest>()
                     {
                         // Index 0x8000 sub index 6: Filter on
-                        new SdoWriteRequest(0x6060, 0x00, dataset1),
-                        // new SdoWriteRequest(0x6087, 0x00, dataset2_1),
+                        new SdoWriteRequest(0x6060, 0x00, dataset1, false, sizeof(byte)),
+                        new SdoWriteRequest(0x6087, 0x00, dataset2_1, false, sizeof(byte)),
                         // new SdoWriteRequest(0x6084, 0x00, dataset2_2),
-                        new SdoWriteRequest(0x6071, 0x00, dataset3),
-                        new SdoWriteRequest(0x6040, 0x00, dataset4_1),
-                        new SdoWriteRequest(0x6040, 0x00, dataset4_2),
-                        new SdoWriteRequest(0x6040, 0x00, dataset4_3),
-                        new SdoWriteRequest(0x6071, 0x00, dataset5)
+                        new SdoWriteRequest(0x6071, 0x00, dataset3, false, sizeof(byte)),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_1, false, sizeof(byte)),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_2, false, sizeof(byte)),
+                        new SdoWriteRequest(0x6040, 0x00, dataset4_3, false, sizeof(byte)),
+                        new SdoWriteRequest(0x6071, 0x00, dataset5, false, sizeof(ushort))
                     };
 
                 slave.Extensions.Add(new InitialSettingsExtension(requests));
